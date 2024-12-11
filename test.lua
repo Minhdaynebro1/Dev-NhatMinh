@@ -6,6 +6,8 @@ elseif game.PlaceId == 16480898254 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/main/Eat%20The%20World.lua"))();
 elseif game.PlaceId == 3101667897 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Legends%20of%20Speed.lua"))();
+elseif game.PlaceId == 13827198708 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Pull%20A%20Sword.lua"))();
 else
   game.Players.LocalPlayer:Kick("Game is not supported!");
 end;
