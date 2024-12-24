@@ -3,40 +3,84 @@ local screenGui = Instance.new("ScreenGui")
 screenGui.Parent = game.Players.LocalPlayer.PlayerGui
 screenGui.Name = "TwoButtonGUI"
 
--- Tạo nút bên trái
-local leftButton = Instance.new("TextButton")
-leftButton.Name = "LeftButton"
-leftButton.Text = "Left Button"
-leftButton.Size = UDim2.new(0, 150, 0, 50) -- Kích thước nút
-leftButton.Position = UDim2.new(0, 50, 0.5, -25) -- Vị trí bên trái
-leftButton.BackgroundColor3 = Color3.new(0, 1, 0) -- Màu xanh lá
-leftButton.TextColor3 = Color3.new(1, 1, 1) -- Màu chữ trắng
-leftButton.Font = Enum.Font.SourceSans
-leftButton.TextSize = 24
-leftButton.Parent = screenGui
+-- Hàm tạo nút
+local function createButton(name, text, position, color)
+    local button = Instance.new("TextButton")
+    button.Name = name
+    button.Text = text
+    button.Size = UDim2.new(0, 180, 0, 60) -- Kích thước nút
+    button.Position = position
+    button.BackgroundColor3 = color -- Màu nền
+    button.TextColor3 = Color3.new(1, 1, 1) -- Màu chữ trắng
+    button.Font = Enum.Font.GothamBold -- Phông chữ đẹp hơn
+    button.TextSize = 20 -- Kích thước chữ
+    button.BorderSizePixel = 0 -- Không viền
+    button.Parent = screenGui
+    button.AutoButtonColor = false -- Tắt hiệu ứng bấm mặc định
 
--- Tạo nút bên phải
-local rightButton = Instance.new("TextButton")
-rightButton.Name = "RightButton"
-rightButton.Text = "Right Button"
-rightButton.Size = UDim2.new(0, 150, 0, 50) -- Kích thước nút
-rightButton.Position = UDim2.new(1, -200, 0.5, -25) -- Vị trí bên phải
-rightButton.AnchorPoint = Vector2.new(1, 0.5) -- Neo ở giữa
-rightButton.BackgroundColor3 = Color3.new(0, 0, 1) -- Màu xanh dương
-rightButton.TextColor3 = Color3.new(1, 1, 1) -- Màu chữ trắng
-rightButton.Font = Enum.Font.SourceSans
-rightButton.TextSize = 24
-rightButton.Parent = screenGui
+    -- Hiệu ứng bo góc
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 15) -- Bo góc 15px
+    corner.Parent = button
 
--- Hàm xử lý khi một trong hai nút được nhấn
-local function handleButtonClick()
-    leftButton.Visible = false -- Ẩn nút bên trái
-    rightButton.Visible = false -- Ẩn nút bên phải
-    print("One button clicked, both buttons are hidden")
+    -- Hiệu ứng khi di chuột
+    button.MouseEnter:Connect(function()
+        button.BackgroundColor3 = button.BackgroundColor3:lerp(Color3.new(1, 1, 1), 0.2) -- Sáng hơn khi hover
+    end)
+    button.MouseLeave:Connect(function()
+        button.BackgroundColor3 = color -- Quay lại màu gốc
+    end)
+
+    return button
 end
 
--- Thêm sự kiện cho nút bên trái
-leftButton.MouseButton1Click:Connect(handleButtonClick)
+-- Khoảng cách giữa hai nút
+local buttonSpacing = 20 -- Khoảng cách giữa 2 nút
 
--- Thêm sự kiện cho nút bên phải
-rightButton.MouseButton1Click:Connect(handleButtonClick)
+-- Tạo nút bên trái
+local leftButton = createButton(
+    "LeftButton", 
+    "Support Mobile", 
+    UDim2.new(0.5, -(180 + buttonSpacing), 0.5, -30), -- Canh giữa, đẩy sang trái
+    Color3.fromRGB(46, 204, 113) -- Màu xanh lá nhạt
+)
+
+-- Tạo nút bên phải
+local rightButton = createButton(
+    "RightButton", 
+    "Support Computer", 
+    UDim2.new(0.5, buttonSpacing, 0.5, -30), -- Canh giữa, đẩy sang phải
+    Color3.fromRGB(52, 152, 219) -- Màu xanh dương nhạt
+)
+
+-- Tạo hiệu ứng nền mờ cho GUI
+local background = Instance.new("Frame")
+background.Size = UDim2.new(500, 500, 500, 500)
+background.BackgroundTransparency = 0.3
+background.BackgroundColor3 = Color3.new(0, 0, 0)
+background.Parent = screenGui
+
+-- Bo góc cho toàn nền
+local bgCorner = Instance.new("UICorner")
+bgCorner.CornerRadius = UDim.new(0, 0)
+bgCorner.Parent = background
+
+-- Hiển thị nền sau các nút
+leftButton.ZIndex = 2
+rightButton.ZIndex = 2
+
+-- Hàm xử lý khi bấm vào Left Button
+leftButton.MouseButton1Click:Connect(function()
+    leftButton.Visible = false
+    rightButton.Visible = false
+    background:Destroy() -- Xóa nền
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/test.lua'))()
+end)
+
+-- Hàm xử lý khi bấm vào Right Button
+rightButton.MouseButton1Click:Connect(function()
+    leftButton.Visible = false
+    rightButton.Visible = false
+    background:Destroy() -- Xóa nền
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinhV2/refs/heads/main/test.lua'))()
+end)
