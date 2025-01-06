@@ -8,6 +8,16 @@ elseif game.PlaceId == 116605585218149 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Go%20Fishing.lua"))();
 elseif game.PlaceId == 8304191830 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua"))();
+elseif game.PlaceId == 8349889591 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua"))();
+elseif game.PlaceId == 14229762361 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua"))();
+elseif game.PlaceId == 14918509670 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua"))();
+elseif game.PlaceId == 14229839966 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua"))();
+elseif game.PlaceId == 3183403065 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua"))();
 else
   game.Players.LocalPlayer:Kick("Game is not supported!");
 end;
