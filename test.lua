@@ -4,6 +4,7 @@ local scripts = {
     [5902977746]  = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/main/Ultimate%20Tower%20Defense.lua",
     [16480898254] = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/main/Eat%20The%20World.lua",
     [116605585218149] = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Go%20Fishing%20W1.lua",
+    [106962503558742] = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Go%20Fishing%20W2.lua",
     [8304191830]  = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua",
     [8349889591]  = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua",
     [14229762361] = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua",
