@@ -11,6 +11,7 @@ local scripts = {
     [14918509670] = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua",
     [14229839966] = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua",
     [3183403065]  = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20AdventureS.lua",
+    [72829404259339]  = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Anime%20Rangers%20X.lua",
     [3101667897]  = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/Legends%20Of%20Speed.lua"
 }
 
