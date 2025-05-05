@@ -1,3 +1,5 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/WSJ_HUB.PREMIUM/ValidateKey.lua"))()
+
 local placeId = game.PlaceId
 local scripts = {
     [16480898254] = "https://raw.githubusercontent.com/Minhdaynebro1/Dev-NhatMinh/refs/heads/main/WSJ_HUB/Eat%20The%20World.lua",
